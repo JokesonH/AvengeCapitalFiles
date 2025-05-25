@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import routes from "./config";
 import { Styles } from "../styles/styles";
+import Home from "../pages/Home";
 
 const Router = () => {
   return (
@@ -11,6 +12,7 @@ const Router = () => {
       <Styles />
       <Header />
       <Switch>
+        <Route path={["/", "/home"]} exact component={Home} />
         {routes.map((routeItem) => {
           return (
             <Route
